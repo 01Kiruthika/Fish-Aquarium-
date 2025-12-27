@@ -133,7 +133,7 @@ h4 {
 .con-icon {
     width: 50px;
     position: fixed;
-    right: 0;
+    right: -5px;
     top: 220px;
     /* background-color: darkcyan; */
     display: flex;
@@ -153,66 +153,55 @@ h4 {
     background-color: darkcyan;
 }
 
-.right-icon {
-    /* border: 2px solid black; */
-    width: 100px;
-    padding: 14px 5px;
-    position: absolute;
-    /* right: 50px; */
-    right: -101px;
-    top: 7px;
-    background-color: black;
-    color: white;
-    font-size: 10px;
-    text-align: center;
-    transition: 1s;
-    z-index: -1;
-}
 
-.con-icon:hover .right-icon {
+
+.con-icon .fa-shopping-cart:hover .right-icon {
     right: 50px;
 
 }
 
-.icons1 {
+.icons {
     /* border: 2px solid; */
     width: 100px;
     position: absolute;
-    top: 66px;
-    right: -150px;
     text-align: center;
     background-color: rgb(14, 13, 13);
     color: white;
-    padding: 14px 5px;
+    padding: 13px 5px;
     transition: 1s;
     z-index: -2;
     font-size: 10px;
 }
 
-.con-icon:hover .icons1 {
-    right: 50px;
-
+.icons1 {
+    top: 6px;
+    right: -100px;
 }
 
 .icons2 {
-    /* border: 2px solid; */
-    width: 100px;
-    position: absolute;
-    top: 125px;
-    right: -150px;
-    text-align: center;
-    background-color: rgb(14, 13, 13);
-    color: white;
-    padding: 14px 5px;
-    transition: 1s;
-    z-index: -3;
-    font-size: 10px;
+    top: 60px;
+    right: -100px;
 }
 
-.con-icon:hover .icons2 {
-    right: 50px;
-
+.icons3 {
+    top: 115px;
+    right: -100px;
 }
+
+
+#shop-icon:hover~.icons1 {
+    right: 40px;
+}
+
+#pic-icon:hover~.icons2 {
+    right: 45px;
+}
+
+#credit-icon:hover~.icons3 {
+    right: 45px;
+}
+
+
 
 .con-foot {
     /* border: 5px solid yellow; */
@@ -474,27 +463,23 @@ h4 {
     width: 400px;
     height: 500px;
     /* padding: 10px; */
+    position: relative;
 }
 
 .card-cate {
     /* border: 2px solid brown; */
     width: 400px;
     height: 250px;
-    background-image: url(../image/aqua.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    border-radius: 2%;
 }
 
 .card-cate img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-     transition: 0.5s;
+    border-radius: 2%;
 }
 
-.card-cate:hover img {
-    transform: scale(0.8,0.8);
-}
 
 
 
@@ -517,17 +502,21 @@ h2 {
     /* padding-bottom: 10px; */
     /* padding-top: 5px; */
     text-align: justify;
+    padding-bottom: 10px;
 }
 
-.card-content a {
+.card-foot {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+}
+
+.card-foot a {
     text-decoration: none;
     color: white;
     border: 2px solid darkcyan;
     background-color: darkcyan;
-    padding: 10px 30px;
-    position: absolute;
-    bottom: 2px;
-    left: 100px;
+    padding: 8px 30px;
     transition: 0.5s;
 }
 
@@ -831,8 +820,7 @@ h2 {
 }
 
 .pets-content h3 {
-    text-align: justify;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     /* color: darkcyan; */
 }
 
@@ -914,17 +902,21 @@ textarea {
     margin-bottom: 10px;
 }
 
+.form-foot {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
 input[type=submit] {
+    /* border: 2px solid black; */
     background-color: #04AA6D;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 40px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    position: absolute;
-    left: 200px;
-    bottom: 45px;
-
 }
 
 input[type=submit]:hover {
@@ -974,8 +966,8 @@ input[type=submit]:hover {
 
 .foot2 {
     color: white;
-    padding: 50px 30px;
-    text-align: center;
+    padding: 50px;
+    /* text-align: center; */
 }
 
 .foot2 ul li {
@@ -1644,25 +1636,28 @@ nav ul li a:hover {
     justify-content: center;
     gap: 10px;
     position: relative;
+    padding: 10px;
 
 }
 
 .s-pet {
-    /* border: 2px solid blue; */
-    width: 250px;
+    /* border: 2px solid black; */
+    width: 300px;
     height: 450px;
     /* padding: 5px; */
     position: relative;
+    box-shadow: 0 0 7px;
+    margin: 5px;
 }
 
 .pet-cate {
     /* border: 2px solid blueviolet; */
-    padding: 15px 10px;
+    padding: 15px 8px;
 }
 
 .shop-cate {
     /* border: 2px solid sandybrown; */
-    width: 220px;
+    width: 280px;
     height: 330px;
     position: relative;
     background-color: #712d4267;
@@ -1671,8 +1666,6 @@ nav ul li a:hover {
 }
 
 .shop-cate h3 {
-    /* border: 2px solid; */
-    /* text-align: end; */
     color: white;
     margin-bottom: 20px;
 }
@@ -1737,7 +1730,7 @@ nav ul li a:hover {
 
 .s-image {
     position: relative;
-    width: 200px;
+    width: 270px;
     height: 225px;
 }
 
@@ -1782,15 +1775,15 @@ nav ul li a:hover {
 
 .s-pet-content {
     /* border: 2px solid seagreen; */
-    width: 250px;
+    width: 300px;
     height: 220px;
     padding: 10px;
     position: relative;
 }
 
 .s-pet-content h3 {
-    text-align: justify;
-    /* padding: 15px 15px; */
+    /* text-align: justify; */
+    padding: 15px 5px;
     /* color: darkcyan; */
 }
 
@@ -2044,24 +2037,24 @@ nav ul li a:hover {
         /* border: 2px solid blue; */
         flex-direction: row;
         flex-wrap: wrap;
+        height: auto;
     }
 
-    .con-body3 .card {
+    .card {
         /* border: 2px solid black; */
-        width: 400px;
-        height: 550px;
+        width: auto;
+        height: auto;
     }
 
     .card-cate,
     .card-content {
-        width: 100%;
+        width: auto;
+        height: auto;
+        font-size: 10px;
     }
 
-    .card-content a {
+    .card-foot a {
         border: 2px soild;
-        position: static;
-        margin-top: 2px;
-        margin-left: 100px;
         display: inline-block;
 
     }
@@ -2081,8 +2074,10 @@ nav ul li a:hover {
 
     .con-inside1 {
         /* border: 2px solid black; */
+        height: auto;
         padding: 40px 20px;
-        text-align: center;
+        /* text-align: center; */
+        font-size: 15px;
     }
 
     .con-inside1 a {
@@ -2149,10 +2144,6 @@ nav ul li a:hover {
     input[type=submit] {
         margin-left: 40px;
         padding: 10px 55px;
-        /* width: 50%; */
-        position: absolute;
-        bottom: 10px;
-        left: 50px;
     }
 
     /* FOOTER  */
@@ -2219,8 +2210,8 @@ nav ul li a:hover {
 
     .a-inside1 {
         /* border: 2px solid blue; */
-        width: 500px;
-        height: 395px;
+        width: auto;
+        height: auto;
         padding-left: 50px;
         position: relative;
     }
@@ -2355,114 +2346,4 @@ nav ul li a:hover {
         /* border: 2px solid black; */
         flex-direction: row;
     }
-}
-
-@media screen and (max-width:375px) {
-
-    .con-icon:hover .right-icon {
-        right: 50px;
-
-    }
-
-    .con-icon:hover .icons1 {
-        right: 50px;
-    }
-
-    .con-icon:hover .icons2 {
-        right: 50px;
-
-    }
-
-    .con-body .content {
-        /* border: 2px solid black; */
-        width: auto;
-        height: auto;
-        font-size: 8px;
-        /* padding: 20px; */
-
-    }
-
-    .a-inside1 {
-        /* border: 2px solid blue; */
-        width: 500px;
-        height: auto;
-        padding-left: 50px;
-        position: relative;
-    }
-
-    .a-inside-img {
-        /* border: 3px solid black; */
-        width: 500px;
-        height: auto;
-    }
-
-
-    .a-inside1 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .s-body {
-        /* border: 4px solid red; */
-        /* flex-direction: row; */
-        flex-wrap: wrap;
-    }
-
-    .pet-cate {
-        /* border: 2px solid seagreen; */
-        flex-direction: row;
-    }
-
-    .aquatic {
-        /* border: 2px solid black; */
-        flex-direction: row;
-    }
-
-    /*LATEST POSTS  */
-
-    .con-body3 {
-        /* border: 2px solid blue; */
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: auto;
-    }
-
-    .con-body3 .card {
-        /* border: 2px solid black; */
-        width: 400px;
-        height: auto;
-    }
-
-    .card-cate,
-    .card-content {
-        width: 100%;
-        height: auto;
-        /* border: 2px solid red; */
-    }
-
-    .card-content a {
-        border: 2px soild;
-        /* position: static; */
-        /* margin-top: 2px; */
-        margin-left: 60px;
-        display: inline-block;
-        padding: 5px 10px;
-
-    }
-
-    input[type=submit] {
-        /* margin-left: 20px; */
-        padding: 5px 10px;
-        position: absolute;
-        left: 80px;
-        bottom: 10px;
-    }
-
-    .con-inside1 {
-        /* border: 5px solid blue; */
-        width: 800px;
-        height: auto;
-    }
-
 }
