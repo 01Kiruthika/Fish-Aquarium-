@@ -455,15 +455,18 @@ h4 {
     padding: 20px 10px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 17px;
 }
 
 .con-body3 .card {
     /* border: 2px solid blue; */
     width: 400px;
-    height: 500px;
+    height: 520px;
     /* padding: 10px; */
     position: relative;
+    border-radius: 2%;
+    box-shadow: 0 0 10px;
+
 }
 
 .card-cate {
@@ -757,7 +760,7 @@ h2 {
     /* border: 4px solid red; */
     padding: 20px 10px 10px;
     display: flex;
-    gap: 5px;
+    gap: 10px;
     position: relative;
 }
 
@@ -765,18 +768,26 @@ h2 {
     /* border: 2px solid blue; */
     width: 330px;
     height: 550px;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
 }
 
 .image-container {
+    /* border: 2px solid; */
     position: relative;
     width: 100%;
     max-width: 400px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
 }
 
 
 .image-container .image {
     width: 100%;
     height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 
@@ -923,7 +934,9 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-
+.con-foot8{
+    padding: 25px 15px;
+}
 /* container7(Footer) */
 
 .container7 {
