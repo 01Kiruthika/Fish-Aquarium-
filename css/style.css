@@ -7,6 +7,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* Container */
 
 .container {
@@ -473,7 +477,11 @@ h4 {
     position: relative;
     border-radius: 2%;
     box-shadow: 0 0 10px;
+    transition: 0.5s;
+}
 
+.card:hover {
+    transform: translateY(-15px);
 }
 
 .card-cate {
@@ -616,6 +624,7 @@ h2 {
     background-image: url(../image/aqua.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     /* margin-top: 80px; */
 }
 
@@ -740,16 +749,22 @@ h2 {
 
 .container6 {
     /* border: 2px solid black; */
-    padding: 20px 10px;
+    /* padding: 20px 10px; */
+    background-image: url(../image/aqua.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .con-head6 {
     /* border: 3px solid green; */
     padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 0.432);
 }
 
 .con-head6 h1 {
     text-align: center;
+    color: white;
 }
 
 .con-body6 {
@@ -758,6 +773,7 @@ h2 {
     display: flex;
     gap: 10px;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.507);
 }
 
 .pets {
@@ -766,6 +782,13 @@ h2 {
     height: 550px;
     box-shadow: 0 0 10px;
     border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.pets:hover {
+    transform: translateY(-15px);
 }
 
 .image-container {
@@ -824,25 +847,27 @@ h2 {
     height: 230px;
     padding: 20px;
     position: relative;
+    color: white;
 }
 
 .pets-content h3 {
     padding-bottom: 20px;
     /* color: darkcyan; */
+
 }
 
 .pets-content h4 {
     /* border: 2px solid; */
     /* font-weight: 900; */
-    color: darkcyan;
+    color: white;
     text-align: center;
     font-weight: 900;
     font-size: 20px;
 }
 
 .pets-content p {
-    color: rgba(0, 0, 0, 0.678);
     text-align: justify;
+    color: rgba(255, 255, 255, 0.815);
 }
 
 .con-foot6 {
@@ -1385,12 +1410,29 @@ nav ul li a:hover {
 
 .f-body {
     /* border: 2px solid red; */
+    width: max-content;
     padding: 30px 20px;
     display: flex;
     /* justify-content: center; */
-    gap: 10px;
-    overflow: auto;
+    gap: 15px;
+    overflow: hidden;
     position: relative;
+    animation: autoScroll 25s linear infinite;
+    will-change: transform;
+}
+
+@keyframes autoScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.f-body:hover {
+    animation-play-state: paused;
 }
 
 .fish {
@@ -1398,9 +1440,10 @@ nav ul li a:hover {
     min-width: 300px;
     height: 200px;
     position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
 }
-
-
 
 .fish-img {
     /* border: 3px solid rebeccapurple; */
@@ -1415,7 +1458,7 @@ nav ul li a:hover {
 }
 
 .inside-cart {
-   
+
     position: absolute;
     bottom: -150px;
     left: 0;
@@ -1437,7 +1480,7 @@ nav ul li a:hover {
 }
 
 .inside-cart h5 {
-     /* border: 2px solid red; */
+    /* border: 2px solid red; */
     /* font-size: 30px; */
     position: absolute;
     left: 70px;
@@ -1492,47 +1535,54 @@ nav ul li a:hover {
 /* Fish Page(Fish Food) */
 
 .f-container1 {
-    /* border: 2px solid black; */
+    /* border: 5px solid black; */
     padding: 15px 15px;
+    background: linear-gradient(to right, #353738, #aea6bf);
 }
 
 .f-head1 {
     /* border: 2px solid green; */
     padding: 30px 15px;
     text-align: center;
+    color: white;
 }
 
 .f-body1 {
-    /* border: 2px solid red; */
+    /* border: 2px solid blue; */
+    width: max-content;
     padding: 30px 15px;
     display: flex;
     gap: 15px;
-    overflow: auto;
+    overflow: hidden;
+    animation: autoScroll 25s linear infinite;
+    will-change: transform;
+}
+
+@keyframes autoScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.f-body1:hover {
+    animation-play-state: paused;
 }
 
 .food {
-    /* border: 2px solid rgb(228, 133, 16); */
+    /* border: 2px solid rgb(161, 92, 6); */
     min-width: 300px;
     height: 250px;
     overflow: hidden;
     position: relative;
-    /* animation: mymove 20s infinite; */
-    /* left: 400px; */
+    flex-shrink: 0;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    border-radius: 10px;
 }
-
-/* .fish:hover {
-    animation-play-state: paused;
-}
-
-@keyframes mymove {
-    from {
-        left: 0px;
-    }
-
-    to {
-        left: -700px;
-    }
-} */
 
 
 .food img {
@@ -1652,6 +1702,11 @@ nav ul li a:hover {
     box-shadow: 0 0 7px;
     margin: 5px;
     border-radius: 5px;
+    transition: 0.5s;
+}
+
+.s-pet:hover {
+    transform: translateY(-15px);
 }
 
 .pet-cate {
@@ -1971,7 +2026,7 @@ nav ul li a:hover {
 
     .body-content,
     .body-content1 {
-         /* border: 2px solid black; */
+        /* border: 2px solid black; */
         /* padding: 20px; */
         padding-left: 50px;
         font-size: 15px;
@@ -2010,7 +2065,7 @@ nav ul li a:hover {
         width: auto;
         height: auto;
         flex-wrap: wrap;
-       
+
     }
 
     .service-content:hover .fish-outside {
@@ -2093,8 +2148,9 @@ nav ul li a:hover {
         /* text-align: center; */
         font-size: 12px;
     }
-    .con-inside1 h3{
-         font-size: 20px;
+
+    .con-inside1 h3 {
+        font-size: 20px;
     }
 
     .con-inside1 a {
@@ -2118,7 +2174,7 @@ nav ul li a:hover {
 
     /* AQUATIC PETS */
 
-    
+
     .con-body6 {
         /* border: 2px solid red; */
         flex-direction: row;
@@ -2185,7 +2241,7 @@ nav ul li a:hover {
     .foot1 {
         height: 200px;
         padding: 5px 15px;
-        
+
     }
 
     .foot-box h1 {
@@ -2200,18 +2256,19 @@ nav ul li a:hover {
 
     .foot-box p {
         padding: 10px;
-        
+
     }
 
-    .con-foot7{
+    .con-foot7 {
         font-size: 12px;
 
     }
 
     /* ABOUT PAGE */
-    .a-head{
+    .a-head {
         font-size: 18px;
     }
+
     .a-body {
         /* border: 2px solid red; */
         flex-direction: row;
@@ -2232,7 +2289,7 @@ nav ul li a:hover {
         /* border: 2px solid springgreen; */
         width: auto;
         height: auto;
-         font-size: 15px;
+        font-size: 15px;
     }
 
     .skill-inside h2,
@@ -2250,7 +2307,7 @@ nav ul li a:hover {
         /* border: 2px solid red; */
         flex-direction: row;
         flex-wrap: wrap;
-        
+
     }
 
     .a-side-text h4 {
@@ -2267,7 +2324,7 @@ nav ul li a:hover {
         height: auto;
         padding-left: 50px;
         position: relative;
-        
+
     }
 
     .a-inside-img {
@@ -2283,14 +2340,14 @@ nav ul li a:hover {
     }
 
     .a-inside1 h2 {
-        
+
         /* padding: 10px 45px 10px 0; */
-         font-size: 24px;
+        font-size: 24px;
     }
 
     .a-inside1 p {
         /* border: 3px solid black; */
-          font-size: 15px;
+        font-size: 15px;
         padding: 10px 30px 15px 0;
     }
 
@@ -2419,7 +2476,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 425px) {
 
-    
+
     .s-body {
         /* border: 4px solid red; */
         flex-direction: row;
